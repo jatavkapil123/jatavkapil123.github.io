@@ -1,0 +1,16 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: portfolio-pdb
+  namespace: portfolio
+  labels:
+    app: portfolio
+    component: availability
+  annotations:
+    description: "Pod Disruption Budget for Portfolio Application"
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app: portfolio
+      component: frontend

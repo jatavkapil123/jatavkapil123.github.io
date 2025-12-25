@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: portfolio
+  labels:
+    name: portfolio
+    environment: production
+    owner: kapil-jatav
+  annotations:
+    description: "Kapil Jatav DevOps Portfolio Application Namespace"
